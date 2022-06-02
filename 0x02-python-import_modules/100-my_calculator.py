@@ -15,7 +15,7 @@ if(__name__ == "__main__"):
         print("{} + {} = {}".format(a, b, add(a, b)))
     elif(operator == '-'):
         print("{} - {} = {}".format(a, b, sub(a, b)))
-    elif(operator == '\`*'):
+    elif(operator == '\*'):
         print("{} * {} = {}".format(a, b, mul(a, b)))
     elif(operator == '/'):
         print("{} / {} = {}".format(a, b, div(a, b)))
