@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-if(__name__ == __main__):
-    import sys
-    from calculator_1 import add, sub, mul, div
+import sys
+from calculator_1 import add, sub, mul, div
+
+if(__name__ == "__main__"):
     no_of_args = len(sys.argv)
     a = int(sys.argv[1])
     operator = sys.argv[2]
