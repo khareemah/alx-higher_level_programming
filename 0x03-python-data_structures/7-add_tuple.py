@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-def add_tuple(tuple_a=(), tuple_b=()):
-    for i in range(len(tuple_a)):
-        print(tuple_a[i])
+def add_tuple(tuple_a=()):
+    for i, item in enumerate(tuple_a):
+        print('index', i, 'item', item, 'tuple', tuple_a[i])
