@@ -28,7 +28,7 @@ class Square:
             value: the size of the square
         """
 
-        if type(value) is int:
+        if type(value) == int:
             if value < 0:
                 raise ValueError("size must be >= 0")
             else:
@@ -51,4 +51,4 @@ class Square:
             for i in range(self.__size):
                 for j in range(self.__size):
                     print("{}".format("#"), end="")
-                print() 
+                print()
