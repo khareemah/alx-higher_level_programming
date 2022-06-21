@@ -12,7 +12,7 @@ class Square:
             Args:
                 size(int): size of the squarr
         """
-        if type(size) == "int":
+        if type(size) == int:
             if size < 0:
                 raise ValueError("size must be >= 0")
             else:
