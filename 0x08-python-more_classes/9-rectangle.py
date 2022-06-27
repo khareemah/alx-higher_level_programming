@@ -23,6 +23,14 @@ class Rectangle:
         self.height = height
         type(self).number_of_instances += 1
 
+    @classmethod
+    def square(cls, size=0):
+        """Return a new Rectangle with width and height equal to size.
+        Args:
+            size (int): The width and height of the new Rectangle.
+        """
+        return (cls(size, size))
+
     @property
     def width(self):
         """Get the width of the rectangle."""
@@ -71,6 +79,23 @@ class Rectangle:
             if x != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """Returns the Rectangle with the greater area.
+        Args:
+            rect_1 (Rectangle): The first Rectangle.
+            rect_2 (Rectangle): The second Rectangle.
+        Raises:
+            TypeError: If rect_1 and rect_2 are not rectangles..
+         """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return (rect_1)
+        return (rect_2)
 
     def __repr__(self):
         """Return a string representation of the Rectangle."""
