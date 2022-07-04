@@ -1,0 +1,66 @@
+==================
+1-my_list subclass
+==================
+
+This subclass inherits the list class. The function print_sorted
+prints a list of ints in ascending order
+
+Import the function:
+  >>> MyList = __import__('1-my_list').MyList
+
+If a number of integers are passed through:
+  >>> my_list = MyList()
+  >>> my_list.append(1)
+  >>> my_list.append(4)
+  >>> my_list.append(2)
+  >>> my_list.append(3)
+  >>> my_list.append(5)
+  >>> my_list.print_sorted()
+  [1, 2, 3, 4, 5]
+
+If all ints are the same:
+  >>> my_list = MyList()
+  >>> my_list.append(6)
+  >>> my_list.append(6)
+  >>> my_list.append(6)
+  >>> my_list.append(6)
+  >>> my_list.append(6)
+  >>> my_list.print_sorted()
+  [6, 6, 6, 6, 6]
+
+If an argument is passed:
+  >>> my_list = MyList()
+  >>> my_list.append(6)
+  >>> my_list.append(6)
+  >>> my_list.append(6)
+  >>> my_list.append(6)
+  >>> my_list.append(6)
+  >>> my_list.print_sorted(5)
+  Traceback (most recent call last):
+  	    ...
+  TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+If a list is empty:
+  >>> my_list = MyList()
+  >>> my_list.print_sorted()
+  []
+
+If a list contains negative numbers:
+  >>> my_list = MyList()
+  >>> my_list.append(1)
+  >>> my_list.append(-4)
+  >>> my_list.append(2)
+  >>> my_list.append(-3)
+  >>> my_list.append(5)
+  >>> my_list.print_sorted()
+  [-4, -3, 1, 2, 5]
+
+If a list is already ordered:
+  >>> my_list = MyList()
+  >>> my_list.append(1)
+  >>> my_list.append(2)
+  >>> my_list.append(3)
+  >>> my_list.append(4)
+  >>> my_list.append(5)
+  >>> my_list.print_sorted()
+  [1, 2, 3, 4, 5]
